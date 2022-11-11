@@ -18,8 +18,6 @@ export class HeroesComponent implements OnInit {
   }
 
   onSelect(hero: Hero): void {
-    const testString:string = 'test';
-    console.log("🚀 ~ file: heroes.component.ts ~ line 26 ~ HeroesComponent ~ onSelect ~ hero", hero)
-    this.selectedHero = hero;
+    this.selectedHero = this.selectedHero === hero ? undefined : hero;
   }
 }
